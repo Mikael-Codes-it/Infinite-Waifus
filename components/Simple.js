@@ -2,13 +2,16 @@ import { loadDefaultErrorComponents } from 'next/dist/server/load-components';
 import React, { useState, useEffect } from 'react'
 // import TinderCard from '../react-tinder-card/index'
 import TinderCard from 'react-tinder-card'
+require('dotenv').config()
 var Airtable = require('airtable');
-import { env } from 'process';
-
-
+var k = "key1"
 const names = require('components/names.json')
-var api_key = process.env.REACT_APP_API_KEY ? process.env.REACT_APP_API_KEY : 'key1kEiXiQd4OQNSB';
-var base = new Airtable({apiKey: process.env.REACT_APP_API_KEY}).base('appoqr0qfeEYF4Nci');
+
+console.log(process.env.NODE_ENV)
+console.log(process.env.REACT_APP_API_KEY)
+
+var api_key = process.env.REACT_APP_API_KEY ? process.env.REACT_APP_API_KEY : k + 'kEiXiQd4OQNSB';
+var base = new Airtable({apiKey: api_key}).base('appoqr0qfeEYF4Nci');
 var airtable_array = Array()
 var faces = Array()
 
