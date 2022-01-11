@@ -3,10 +3,12 @@ import React, { useState, useEffect } from 'react'
 // import TinderCard from '../react-tinder-card/index'
 import TinderCard from 'react-tinder-card'
 var Airtable = require('airtable');
-const config = require('components/config.json')
-const names = require('components/names.json')
+import { env } from 'process';
 
-var base = new Airtable({apiKey: config.api_key}).base('appoqr0qfeEYF4Nci');
+
+const names = require('components/names.json')
+var api_key = process.env.REACT_APP_API_KEY ? process.env.REACT_APP_API_KEY : 'key1kEiXiQd4OQNSB';
+var base = new Airtable({apiKey: process.env.REACT_APP_API_KEY}).base('appoqr0qfeEYF4Nci');
 var airtable_array = Array()
 var faces = Array()
 
