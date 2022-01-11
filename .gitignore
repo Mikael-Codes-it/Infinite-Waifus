@@ -32,4 +32,3 @@ yarn-error.log*
 # Local Netlify folder
 .netlify
 
-/components/config.json
