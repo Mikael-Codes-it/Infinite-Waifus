@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Header from '@components/Header'
 import Footer from '@components/Footer'
-import Simple from 'pages/Simple'
+import Simple from '@components/Simple'
 
 
 export default function Home() {
